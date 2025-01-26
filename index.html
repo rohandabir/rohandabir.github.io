@@ -45,7 +45,7 @@
     <main class="main-content">
         <section class="about-section">
             <p>
-                Hi, I'm Rohan, a guy who has always been interested in electronics and tech, 
+                Hi, I'm <span id ="bb"></span>, a guy who has always been interested in electronics and tech, 
                 and who has now developed an interest for web development.
             </p>
         </section>
@@ -92,6 +92,42 @@
             "https://bsky.app/profile/rohandabir.com"
         ]
     }
+    </script>
+    <script>
+      // Sleep function to introduce delay
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      let disp = document.getElementById('bb');
+      let nm = '';
+      let name = ['','R', 'o', 'h', 'a', 'n'];
+
+      // Main function to update text with delay
+      async function updateText() {
+        for (let i = 0; i < name.length; i++) {
+          nm += name[i]; // Build the text
+          disp.innerText = nm + '|'; // Display the text
+          await sleep(500); // Wait for 200ms
+        }
+      }
+
+      // Function to delete text with delay
+      async function deltxt() {
+        for (let i = name.length; i > 0; i--) {
+          nm = nm.slice(0, -1); // Remove the last character
+          disp.innerText = nm + '|'; // Display the text
+          await sleep(500); // Wait for 200ms
+        }
+      }
+
+      // Run the functions sequentially
+      (async function () {
+        await updateText(); // Add text
+        await deltxt();  
+        disp.innerText = 'Rohan' 
+           // Delete text
+      })();
     </script>
 </body>
 </html>
