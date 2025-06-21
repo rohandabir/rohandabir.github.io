@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Dabir</title>
+    
+    <meta name="msvalidate.01" content="13141BBC4A742042C0B35BA341471636" />
+    <meta name="description" content="Hi, I'm Rohan Dabir, an electronics enthusiast and web developer in learning. Explore my projects and get in touch!">
+    <meta name="keywords" content="Rohan Dabir, electronics, web development, tech enthusiast, contact">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta property="og:title" content="Rohan Dabir - Electronics Enthusiast & Web Developer in Learning">
+    <meta property="og:description" content="Hi, I'm Rohan Dabir, an electronics enthusiast and web developer in learning.">
+    <meta property="og:image" content="https://rohandabir.com/images/ogimg.jpg">
+    <meta property="og:url" content="https://rohandabir.com">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rohan Dabir - Electronics Enthusiast & Web Developer in Learning">
+    <meta name="twitter:description" content="Hi, I'm Rohan Dabir, an electronics enthusiast and web developer.">
+    <meta name="twitter:image" content="https://rohandabir.com/images/ogimg.jpg">
+
+    <link rel="icon" href="/images/favicon.ico">
+ 
+    
+    <meta name="apple-mobile-web-app-title" content="Rohan Dabir">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="preload" href="/images/Signal-Logo-Ultramarine.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/images/email.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/images/github.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/images/matrix.svg" as="image" type="image/svg+xml">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="about-title">About</div>
+        <div class="about-subtitle">Me</div>
+    </header>
+    <main class="main-content">
+        <section class="about-section">
+            <p>
+                Hi, I'm <span id ="bb"></span>, a guy who has always been interested in electronics and tech, 
+                and who has now developed an interest for web development.
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contact-container">
+            <h3 class="contact-heading">Contact Me</h3>
+            <div class="contact-item">
+                <img src="/images/email.svg" alt="Email icon" class="contact-icon">
+                <a href="mailto:contact@rohandabir.com">contact@rohandabir.com</a>
+            </div>
+            <div class="contact-item">
+                <img src="/images/github.svg" alt="GitHub icon" class="contact-icon">
+                <a href="https://github.com/rohandabir">rohandabir</a>
+            </div>
+            <div class="contact-item">
+                <img src="/images/Signal-Logo-Ultramarine.svg" alt="Signal icon" class="contact-icon">
+                <a href="https://signal.me/#eu/MsIOgPAnPH-6x1nr1i0aosMZYF2JLa9bwj_CJM817OC044Gsm-pMqo1qBmwbnscO">rohan.11</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rohan Dabir",
+        "description": "An electronics enthusiast and web developer in learning.",
+        "url": "https://rohandabir.com", 
+        "image": "https://rohandabir.com/images/ogimg.jpg",
+        "sameAs": [
+            "https://github.com/rohandabir",
+            "mailto:contact@rohandabir.com",
+            "https://matrix.to/#/@rohandabir:matrix.org"
+        ]
+    }
+    </script>
+    <script>
+      // Sleep function to introduce delay
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      let disp = document.getElementById('bb');
+      let nm = '';
+      let name = ['','R', 'o', 'h', 'a', 'n'];
+
+      // Main function to update text with delay
+      async function updateText() {
+        for (let i = 0; i < name.length; i++) {
+          nm += name[i]; // Build the text
+          disp.innerText = nm + '|'; // Display the text
+          await sleep(500); // Wait for 200ms
+        }
+      }
+
+      // Function to delete text with delay
+      async function deltxt() {
+        for (let i = name.length; i > 0; i--) {
+          nm = nm.slice(0, -1); // Remove the last character
+          disp.innerText = nm + '|'; // Display the text
+          await sleep(500); // Wait for 200ms
+        }
+      }
+
+      // Run the functions sequentially
+      (async function () {
+        await updateText(); // Add text
+        await deltxt();  
+        disp.innerText = 'Rohan' 
+           // Delete text
+      })();
+    </script>
+</body>
+</html>

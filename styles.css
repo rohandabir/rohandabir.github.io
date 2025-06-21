@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+
+html ,body {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #FDCA40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.about-title {
+    font-weight: bold;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+}
+
+.about-subtitle {
+    color: #3772FF;
+    margin-left: 0.2em;
+    font-weight: bold;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+}
+
+.main-content {
+    background: #DF2935;
+    color: #FFFAFF;
+    padding: 1.5rem;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 95%;
+}
+
+.footer {
+    background: #20A39E;
+    color: #FFFFFF;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-weight: bold;
+}
+
+.contact-icon {
+    width: clamp(1.5rem, 4vw, 3.5rem);
+    height: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.3rem;
+    }
+
+    .main-content, .footer {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        font-size: clamp(1.2rem, 3.5vw, 3rem);
+    }
+}
